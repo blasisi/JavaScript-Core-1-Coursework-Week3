@@ -3,15 +3,20 @@ Write a function that:
 - Accepts an array as a parameter.
 - Returns a new array containing the first five elements of the passed array.
 */
-function first5() {
+function first5(arr) {
+  const newArr = arr.slice(0,5)
+ return  newArr;
 }
+
 
 /*
 Write a function that:
 - Accepts an array as a parameter.
 - Returns a new array containing the same elements, except sorted.
 */
-function sortArray() {
+function sortArray(array) {
+  const newArraySort = array.sort(array);
+  return newArraySort;
 }
 
 /*
@@ -24,16 +29,30 @@ Write a function that:
 - Removes any forward slashes (/) in the strings.
 - Makes the strings all lowercase.
 */
-function tidyUpString() {
+function tidyUpString(str) {
+if (str.length <=2) {
+   return str
+}else{
+   return str.substring(1, str,length-1);
 }
-
+}
+  // const removeArray= [];
+//   const removeSlash =[];
+//   const arrLowerCase =[];
+//   for  (let i = 0; < eleArray.length; i++ ){
+//     if (eleArray.indexOf)
+//   removeArray = eleArray[i].trim();
+//  }
+// }
 /*
 Write a function that:
 - Takes an array and an index as input.
 - Returns a new array containing the same elements, but without the element at the passed index.
 */
 
-function remove() {
+function remove(arr, index) {
+  arr.slice (0, 1);
+      return arr;
 }
 
 /*
@@ -44,8 +63,14 @@ Write a function that:
 - Numbers greater 100 must be replaced with 100.
 */
 
-function formatPercentage() {
-}
+function formatPercentage(array) {}
+// for (let i = 0; i <array.length; i++ ){
+//   if (array[i] > 100){
+
+//   }else {
+//    return arr;
+//   }
+// }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

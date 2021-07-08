@@ -10,9 +10,15 @@
 
     Some string methods that might help you here are .replace() and .substring(). 
 */
+// const findSafeOxygenLevel = ["24.2%", "11.3%", "19.9%", "23.1%", "29.3%", "20.2%"];
 
-function findSafeOxygenLevel() {}
+const  safeLevel= findSafeOxygenLevel.substring(0,15);
 
+
+
+
+
+console.log (findSafeOxygenLevel);
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 test("findSafeOxygenLevel function works - case 1", () => {
