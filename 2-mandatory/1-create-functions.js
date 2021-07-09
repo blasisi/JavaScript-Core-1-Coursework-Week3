@@ -15,10 +15,10 @@ Write a function that:
 - Returns a new array containing the same elements, except sorted.
 */
 function sortArray(array) {
-  const newArraySort = array.sort(array);
+  const copyArray= [...array]
+  const newArraySort = copyArray.sort();
   return newArraySort;
 }
-
 /*
 NOTE: This exercise is the same as one you did last week - try to do it again using things you learnt this week.
 Think about what is better about this solution than your one last week, and what is worse.
@@ -30,14 +30,30 @@ Write a function that:
 - Makes the strings all lowercase.
 */
 function tidyUpString(str) {
-if (str.length <=2) {
-   return str
-}else{
-   return str.substring(1, str,length-1);
+
+   const newStr = str.map(function tidyUpStr(s){
+     const removeSpace=s.trim();
+     const removeSlash= removeSpace.replace("/", "");
+     const addLowerCase = removeSlash.toLowerCase();
+     return addLowerCase;
+      
+
+  });
+return newStr;
+
 }
-}
-  // const removeArray= [];
-//   const removeSlash =[];
+
+
+
+
+
+// if (str.length <=2) {
+//    return str
+// }else{
+//    return str.substring(1, str,length-1);
+// }
+
+// const removeSlash =[];
 //   const arrLowerCase =[];
 //   for  (let i = 0; < eleArray.length; i++ ){
 //     if (eleArray.indexOf)
@@ -51,8 +67,10 @@ Write a function that:
 */
 
 function remove(arr, index) {
-  arr.slice (0, 1);
-      return arr;
+   const removeIndexStart= arr.slice (0, index);
+   const removeIndexEnd = arr.slice (index +1, arr.length);
+      return removeIndexStart.concat(removeIndexEnd);
+
 }
 
 /*
@@ -63,7 +81,20 @@ Write a function that:
 - Numbers greater 100 must be replaced with 100.
 */
 
-function formatPercentage(array) {}
+function formatPercentage(array) {
+  const formatted = array.map(function tidyPercentage(p){
+
+       // The numbers must be rounded to 2 decimal places.
+       const rounded = p.toFixed(2)
+       // Numbers greater than 100 must be replaced with 100
+       const to100 = p > 100 ? 100 : p;
+       return `${rounded}%`;
+    });
+  return formatted;
+
+  }
+
+
 // for (let i = 0; i <array.length; i++ ){
 //   if (array[i] > 100){
 

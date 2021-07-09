@@ -6,18 +6,18 @@
   - Do not edit any of the existing code
 */
 
-let pairsByIndex = [[0, 3], [1, 2], [2, 1], null, [3, 0]];
+const  pairsByIndex = [[0, 3], [1, 2], [2, 1], null, [3, 0]];
 
-let nullValue = (arr) => === null;
-console.log(pairsByIndex.some(nullValue));
-// If there is a null value in the array exit the program with the error code
+
+function isNull(arr){
+ return  arr => === null;
+}
 if (pairsByIndex.some(nullValue) === true){
-      process.exit(1);
-  }else{
-   return  [student, mentor];
-  };
+  process.exit(1);
+}
 
-
+// console.log(pairsByIndex.some(nullValue));
+// If there is a null value in the array exit the program with the error code
 // https://nodejs.org/api/process.html#process_process_exit_code
 // process.exit(1);
 

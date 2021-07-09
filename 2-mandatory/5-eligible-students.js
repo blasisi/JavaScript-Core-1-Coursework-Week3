@@ -8,7 +8,10 @@
 */
 
 function getEligibleStudents(arr) {
-  return arr.filter(index => index[1] >= 8).map(index) => index[0]);
+  arr.map(elem[1]) => {
+  return arr.filter(Element => element[1] >= 8) && element.map("attendance") >= element[0]));
+    
+  
 
 
 /* ======= TESTS - DO NOT MODIFY ===== */
